@@ -15,6 +15,12 @@
     <body>
         <h3>Welcome to Cognito</h3>
 
+
+        {% if user.is_authenticated %}
+        <h3>Hello {{ fname }}</h3>
+        <h4>You're Successfully Logged In</h4>
+        {% endif %}
+        
         <button type = "submit"> <a href="/signup"> Sign Up</a></button>
         <button type = "submit"> <a href="/signin"> Sign In</a></button>
         <button type = "submit"> <a href="/signout"> Sign Out</a></button>
