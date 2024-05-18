@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X_UA-Compatible" content = "IE=edge">
-        <title>Sign Up</title>
+        <title>Sign In</title>
         <meta name="description" content = "">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -17,7 +17,7 @@
         <h3>Sign In</h3>
 
         <form action = "/signin" method = "post">
-            {% csrf_token %}
+            {% csrf_token %}    
             <label for="">Username</label>
             <input type="text" id="username" name="username" placeholder="Enter Your Username" required>
             <br>
