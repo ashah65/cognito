@@ -5,32 +5,46 @@
 {% block content %}
         <h3>Sign Up</h3>
 
-        <form action = "/signup" method = "post">
+        <form action="/signup" method = "post">
             {% csrf_token %}
-            <label for="">Username</label>
-            <input type="text" id="username" name="username" placeholder="Create a username (only letters and numbers)" required>
+            <div>
+                <label for="">Username</label>
+                <input class="auth-input" type="text" id="username" name="username" placeholder="Create a username (only letters and numbers)" required>
+            </div>
             <br>
 
-            <label for="">First Name</label>
-            <input type="text" id="fname" name="fname" placeholder="Enter Your First Name" required>
+            <div>
+                <label for="">First Name</label>
+                <input class="auth-input" type="text" id="fname" name="fname" placeholder="Enter Your First Name" required>
+            </div>
             <br>
             
-            <label for="">Last Name</label>
-            <input type="text" id="lname" name="lname" placeholder="Enter Your Last Name" required>
+            <div>
+                <label for="">Last Name</label>
+                <input class="auth-input" type="text" id="lname" name="lname" placeholder="Enter Your Last Name" required>
+            </div>
             <br>
             
-            <label for="">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter Your Email Address" required>
+            <div>
+                <label for="">Email</label>
+                <input class="auth-input" type="email" id="email" name="email" placeholder="Enter Your Email Address" required>
+            </div>
             <br>
                 
-            <label for="">Password</label>
-            <input type="password" id="pass1" name="pass1" placeholder="Create a Password" required>
+            <div>
+                <label for="">Password</label>
+                <input class="auth-input" type="password" id="pass1" name="pass1" placeholder="Create a Password" required>
+            </div>
             <br>
             
-            <label for="">Confirm Password</label>
-            <input type="password" id="pass2" name="pass2" placeholder="Confirm Your Password" required>
+            <div>
+                <label for="">Confirm Password</label>
+                <input class="auth-input" type="password" id="pass2" name="pass2" placeholder="Confirm Your Password" required>
+            </div>
             <br>
-            
-            <button type="submit">Sign Up</button>
+            <div>
+                <a class="text-primary" href="{% url 'signin' %}">Already have an account? Login here</a>
+            </div>
+            <button class="btn auth-btn" type="submit">Sign Up</button>
         </form>
 {% endblock %}
