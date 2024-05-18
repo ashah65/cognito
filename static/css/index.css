@@ -1,0 +1,42 @@
+:root {
+  --font-color: #d1d5db;
+}
+
+body {
+  background-color: #18181b;
+  color: var(--font-color);
+  font-family: Poppins, sans-serif;
+}
+
+
+.header {
+  font-size: 2rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  background-color: #1f2937;
+  border: none;
+  color: var(--font-color);
+}
+
+input:focus {
+  border: 1px solid red;
+
+}
+
+.auth-input {
+  padding: 0.5rem;
+}
+
+
