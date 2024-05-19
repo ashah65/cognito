@@ -3,32 +3,38 @@
 <!--[if IE 7]>          <html class = "no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>          <html class = "no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>       <html class = "no-js> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X_UA-Compatible" content = "IE=edge">
-        <title>Sign In</title>
-        <meta name="description" content = "">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
 
+{% extends 'base.html' %}
+
+{% block title %}Signin{% endblock %}
+
+{% block content %}
+
+<html>
+   
         <h3>Sign In</h3>
 
-        <form action = "/signin" method = "post">
-            {% csrf_token %}    
-            <label for="">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter Your Username" required>
-            <br>
-                
-            <label for="">Password</label>
-            <input type="password" id="pass1" name="pass1" placeholder="Enter Your Password" required>
+        <form action="/signin" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="username">Username</label>
+                <input class="auth-input" type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
             <br>
             
-            <button type="submit">Sign In</button>
+            <div>
+                <label for="password">Password</label>
+                <input class="auth-input" type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <br>
+            
+            <div>
+                <a class="text-primary" href="{% url 'signup' %}">Don't have an account? Sign up here</a>
+            </div>
+            <button class="btn auth-btn" type="submit">Sign In</button>
         </form>
 
         <script src="" async defer></script>
-    </body>
 </html>
+
+{% endblock %}

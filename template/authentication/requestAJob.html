@@ -3,15 +3,18 @@
 <!--[if IE 7]>          <html class = "no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>          <html class = "no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>       <html class = "no-js> <!--<![endif]-->
+
+
+
+
+{% extends 'base.html' %}
+
+{% block title %}Request A Job{% endblock %}
+
+
+{% block content %}
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X_UA-Compatible" content = "IE=edge">
-        <title>Cognito - Request a Job</title>
-        <meta name="description" content = "">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
+    
     <body>
 
         <h3>Request a job for a private detective</h3>
@@ -40,3 +43,4 @@
         <script src="" async defer></script>
     </body>
 </html>
+{% endblock %}
